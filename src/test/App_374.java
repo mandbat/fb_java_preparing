@@ -3,7 +3,7 @@ package test;
 public class App_374 {
 
 	public static void main(String[] args) {
-		System.out.println(findAnswer(10));
+		System.out.println(findAnswer(999));
 	}
 
 	private static int findAnswer(int n) {
@@ -16,18 +16,40 @@ public class App_374 {
 		if (guess(min) == 0)
 			return min;
 
+		int mid1 = 1;
+		int mid2 = n;
+
 		while (true) {
-			int mid = ((max + min) / 2);
-			int res = guess(mid);
-			if (res == 0) {
-				return mid;
-			} else if (res == 1) {
-				min = mid;
+
+			if (mid1 == min + (max - min) / 3) {
+				mid1++;
 			} else {
-				max = mid;
+				mid1 = min + (max - min) / 3;
+			}
+
+			if (mid2 == max - (max - min) / 3) {
+				mid2--;
+			} else {
+				mid2 = max - (max - min) / 3;
+			}
+
+			int res1 = guess(mid1);
+			int res2 = guess(mid2);
+
+			if (res1 == 0)
+				return mid1;
+			if (res2 == 0)
+				return mid2;
+
+			if (res1 == -1) {
+				max = mid1;
+			} else if (res2 == 1) {
+				min = mid2;
+			} else {
+				min = mid1;
+				max = mid2;
 			}
 		}
-
 	}
 
 	private static int guess(int num) {
