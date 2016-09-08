@@ -9,19 +9,19 @@ public class App_258 {
 
 	private static int addDigits(int num) {
 
-//		while (num > 9) {
-//
-//			char[] ch = ("" + num).toCharArray();
-//			int k = 0;
-//			for (char c : ch) {
-//				k = k + Integer.valueOf(String.valueOf(c));
-//			}
-//			num = k;
-//
-//		}
-//		return num;
+		while (num > 9) {
 
-		return num - 9*((num-1)/9);
+			char[] ch = ("" + num).toCharArray();
+			int k = 0;
+			for (char c : ch) {
+				k = k + Integer.valueOf(String.valueOf(c));
+			}
+			num = k;
+
+		}
+		return num;
+
+		// return num - 9*((num-1)/9);
 		
 	}
 

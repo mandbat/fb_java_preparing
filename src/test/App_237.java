@@ -19,13 +19,4 @@ public class App_237 {
 
 	}
 
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
-
 }
