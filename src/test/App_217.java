@@ -15,15 +15,21 @@ public class App_217 {
 		if (nums == null || nums.length == 0)
 			return false;
 
-		HashSet<Integer> set = new HashSet<Integer>();
+//		HashSet<Integer> set = new HashSet<Integer>();
+//		for (int i : nums) {
+//			if (!set.add(i)) {
+//				return true;
+//			}
+//		}
+//
+//		return false;
+
+		HashSet<Integer> set = new HashSet<>();
 		for (int i : nums) {
-			if (!set.add(i)) {
-				return true;
-			}
+			set.add(i);
 		}
-
-		return false;
-
+		if (nums.length == set.size()) return false; else return true;
+		
 	}
 
 }

@@ -5,7 +5,11 @@ public class App_100 {
 	public static void main(String[] args) {
 
 		TreeNode p = new TreeNode(1);
-		TreeNode q = new TreeNode(2);
+		p.left = new TreeNode(2);
+		p.left.left = new TreeNode(3);
+		TreeNode q = new TreeNode(1);
+		q.left = new TreeNode(2);
+		q.left.left = new TreeNode(3);
 
 		System.out.println(isSameTree(p, q));
 	}
