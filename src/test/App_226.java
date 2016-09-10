@@ -1,7 +1,8 @@
 package test;
 
 /*
- * Invert a binary tree.
+ * Invert Binary Tree  
+ * 
  *      4
  *    /   \
  *   2     7
