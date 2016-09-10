@@ -1,5 +1,10 @@
 package test;
 
+/*
+ * Related to question Excel Sheet Column Title
+ * Given a column title as appear in an Excel sheet, return its corresponding column number.
+ */
+
 public class App_171 {
 
 	public static void main(String[] args) {

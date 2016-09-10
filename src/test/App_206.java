@@ -1,6 +1,8 @@
 package test;
 
-import java.util.ArrayList;
+/*
+ * Reverse a singly linked list.
+ */
 
 public class App_206 {
 
@@ -22,25 +24,23 @@ public class App_206 {
 
 	public static ListNode reverseList(ListNode head) {
 
-		if (head == null) return null;
-		if (head.next == null) return head;
-		ArrayList<ListNode> list = new ArrayList<>();
-		while (head != null) {
-			list.add(head);
-			head = head.next;
+		if (head == null || head.next == null) return head;
+		
+		ListNode temp = new ListNode(0);
+		temp.next = head.next;
+		head.next = null;
+		
+		ListNode help = new ListNode(0);
+		help.next = head;
+		
+		while (temp.next != null) {
+			ListNode t = temp.next;
+			temp.next = temp.next.next;
+			t.next = help.next;
+			help.next = t;
 		}
 
-		int i = list.size() - 1;
-		head = list.get(i);
-		i--;
-		ListNode current = head;
-		while (i >= 0) {
-			current.next = list.get(i);
-			current = current.next;
-			i--;
-		}
-
-		return head;
+		return help.next;
 
 	}
 

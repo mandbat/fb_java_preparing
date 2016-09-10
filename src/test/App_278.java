@@ -1,3 +1,5 @@
+package test;
+
 /*
  * First Bad Version
  * You are a product manager and currently leading a team to develop a new product. 
@@ -8,8 +10,6 @@
  * Implement a function to find the first bad version. 
  * You should minimize the number of calls to the API.
  */
-
-package test;
 
 public class App_278 {
 
