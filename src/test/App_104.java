@@ -10,6 +10,7 @@ package test;
 public class App_104 {
 
 	public static void main(String[] args) {
+		App_104 app = new App_104();
 
 		TreeNode t = new TreeNode(1);
 		t.left = new TreeNode(1);
@@ -23,10 +24,10 @@ public class App_104 {
 		t.right.right.right.left = new TreeNode(1);
 		t.right.right.right.left.right = new TreeNode(1);
 
-		System.out.println(maxDepth(t));
+		System.out.println(app.maxDepth(t));
 	}
 
-	public static int maxDepth(TreeNode root) {
+	public int maxDepth(TreeNode root) {
 		if (root == null)
 			return 0;
 		int leftDepth = maxDepth(root.left);

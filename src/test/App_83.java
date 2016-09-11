@@ -23,10 +23,19 @@ public class App_83 {
 	}
 
 	public static ListNode deleteDuplicates(ListNode head) {
-		
-		ListNode help = new ListNode(0);
-		help.next = head;
-		
+
+		if (head == null || head.next == null) return head;
+
+		int val = head.val;
+		ListNode current = head;
+		while (current.next != null) {
+			if (val == current.next.val) {
+				current.next = current.next.next;
+			} else {
+				val = current.next.val;
+				current = current.next;
+			}
+		}
 
 		return head;
 

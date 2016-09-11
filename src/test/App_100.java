@@ -10,6 +10,7 @@ package test;
 public class App_100 {
 
 	public static void main(String[] args) {
+		App_100 app = new App_100();
 
 		TreeNode p = new TreeNode(1);
 		p.left = new TreeNode(2);
@@ -18,10 +19,10 @@ public class App_100 {
 		q.left = new TreeNode(2);
 		q.left.left = new TreeNode(3);
 
-		System.out.println(isSameTree(p, q));
+		System.out.println(app.isSameTree(p, q));
 	}
 
-	public static boolean isSameTree(TreeNode p, TreeNode q) {
+	public boolean isSameTree(TreeNode p, TreeNode q) {
 
 		if (p == null && q == null)
 			return true;

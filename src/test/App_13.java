@@ -18,10 +18,11 @@ package test;
 public class App_13 {
 
 	public static void main(String[] args) {
-		System.out.println(romanToInt("XIX"));
+		App_13 app = new App_13();
+		System.out.println(app.romanToInt("XIX"));
 	}
 
-	public static int romanToInt(String s) {
+	public int romanToInt(String s) {
 
 		char[] ch = s.toCharArray();
 		int i = 0;
