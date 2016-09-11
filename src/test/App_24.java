@@ -13,18 +13,12 @@ package test;
 public class App_24 {
 
 	public static void main(String[] args) {
-		ListNode list = new ListNode(1);
-		list.next = new ListNode(2);
-		list.next.next = new ListNode(3);
-		list.next.next.next = new ListNode(4);
-		list.next.next.next.next = new ListNode(5);
-		list.next.next.next.next.next = new ListNode(6);
 
-		System.out.println(list.val + " " + list.next.val + " " + list.next.next.val + " " + list.next.next.next.val
-				+ " " + list.next.next.next.next.val + " " + list.next.next.next.next.next.val);
+		ListNode list = ListNodeUtils.getListNode(6);
+
+		ListNodeUtils.printList(list);
 		list = swapPairs(list);
-		System.out.println(list.val + " " + list.next.val + " " + list.next.next.val + " " + list.next.next.next.val
-				+ " " + list.next.next.next.next.val + " " + list.next.next.next.next.next.val);
+		ListNodeUtils.printList(list);
 
 	}
 

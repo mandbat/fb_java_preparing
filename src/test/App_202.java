@@ -1,5 +1,7 @@
 package test;
 
+import java.util.HashSet;
+
 /*
  * Happy Number
  * 
@@ -21,16 +23,28 @@ package test;
 public class App_202 {
 
 	public static void main(String[] args) {
-		int n = 12;
-		System.out.println(getSumm(n));
+		int n = 13;
+		System.out.println(isHappy(n));
 	}
 
-	private static int getSumm(int n) {
+	public static boolean isHappy(int n) {
+		HashSet<Integer> set = new HashSet<>();
+		while (!set.contains(n)) {
+			set.add(n);
+			n = calculate(n);
+			if (n == 1)
+				return true;
+		}
+		return false;
+	}
+
+	private static int calculate(int n) {
 		int sum = 0;
 		while (n > 0) {
-			sum += (n % 10) * (n % 10); // OR Math.pow(n % 10, 2);
+			sum += (n % 10) * (n % 10);
 			n = n / 10;
 		}
 		return sum;
 	}
+
 }

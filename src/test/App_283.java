@@ -16,8 +16,7 @@ import java.util.Arrays;
 public class App_283 {
 
 	public static void main(String[] args) {
-		// int[] mass = { 0, 1, 0, 0, 5, 0, 3, 12, 0, 0, 0, 77 };
-		int[] mass = { 0, 0, 0, 0 };
+		int[] mass = { 0, 1, 0, 0, 5, 0, 3, 12, 0, 0, 0, 77 };
 		System.out.println(Arrays.toString(moveZeroes(mass)));
 	}
 

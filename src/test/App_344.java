@@ -11,10 +11,7 @@ package test;
 public class App_344 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.out.println(reverseString("hello"));
-
 	}
 
 	private static String reverseString(String s) {
