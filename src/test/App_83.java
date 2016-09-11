@@ -15,7 +15,7 @@ public class App_83 {
 
 	public static void main(String[] args) {
 
-		ListNode list = ListNodeUtils.getListNode(6);
+		ListNode list = ListNodeUtils.getListNodeWithDouble(6);
 		ListNodeUtils.printList(list);
 		list = deleteDuplicates(list);
 		ListNodeUtils.printList(list);
@@ -23,6 +23,10 @@ public class App_83 {
 	}
 
 	public static ListNode deleteDuplicates(ListNode head) {
+		
+		ListNode help = new ListNode(0);
+		help.next = head;
+		
 
 		return head;
 
